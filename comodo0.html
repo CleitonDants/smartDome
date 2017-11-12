@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>SmartDome</title>
+	<!-- !**********************************************************************! -->
+	<!-- !                              Font Awesome                            ! -->
+	<!-- ************************************************************************ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- ************************************************************************ -->
+	<!-- !                            Fonts Exportadas                          ! -->
+	<!-- ************************************************************************ -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+	<!-- !**********************************************************************! -->
+	<!-- !                            Bootstrap e Ajax                          ! -->
+	<!-- ************************************************************************ -->
+	<link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- ************************************************************************ -->
+	<!-- !                               ScrollMagic                            ! -->
+	<!-- ************************************************************************ -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>		
+	<!-- ************************************************************************ -->
+	<!-- !                                 Padrão                               ! -->
+	<!-- ************************************************************************ -->
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="html, web, smartDome">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/icone.png">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="application0.js"></script>
+</head>
+<body>
+	<header>
+		<button onclick="location.href='index.html'" style="background: transparent; border: 0;">
+			<span class="glyphicon glyphicon-menu-left" style="color:white; font-size:2em;" ></span>
+		</button>
+		<h4 class="quarto">Banheiro</h4>
+		<br/>
+		<hr/>
+	</header>
+	<div class="imgComodo">
+		<span class="glyphicon glyphicon-tint"></span>
+	</div>
+	<div class="iot">
+		<h4>Lâmpada 1</h4>
+	</div>
+	<div class="iotON">
+		<label class="switch">
+		  <input id="clique2" type="checkbox">
+		  <span class="slider round"></span>
+		</label>
+	</div>
+	<footer class="footer">
+		<button class="btnNovoDevice" data-toggle="modal" data-target="#newDevice"><span class="glyphicon glyphicon-plus"></span></button>
+		<button class="btnNovoDevice" data-toggle="modal" data-target="#deleteDevice"><span class="glyphicon glyphicon-trash"></span></button>
+	</footer>
+	<div id="newDevice" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    	<!-- Modal content-->
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        	<h4 class="modal-title">Especifique seu dispositivo.</h4>
+		      	</div>
+		   		<div class="modal-body">
+					<input type="name" class="form-control" id="nomeComodo" placeholder="Nome">
+					<br/>
+		    		<select class="form-control" id="sel1" placeholder="Categoria">
+							<option id='cat'>Categoria</option>
+							<option id='nul'></option>
+							<option id='ilu'>Iluminação</option>
+							<option id='cli'>Climatização</option>
+							<option id='seg'>Segurança</option>
+							<option id='laz'>Lazer</option>
+							<option id='lim'>Limpeza</option>
+							<option id='out'>Outro</option>
+					</select>
+					<br/>
+					<label>Dispositivos:</label>
+					<ul id='devices' class="list-group">
+				  	</ul>
+		    	</div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+			    </div>
+		    </div>
+		</div>
+	</div>
+	<div id="deleteDevice" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    	<!-- Modal content-->
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        	<h4 class="modal-title">Selecione o dispositivo que deseja deletar.</h4>
+		      	</div>
+		   		<div class="modal-body">
+		    		<select class="form-control" id="sel1" placeholder="Categoria">
+					    <option>Selecionar</option>
+					    <option></option>
+					    <option>Lâmpada 1</option>
+					</select>
+		    	</div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-danger" data-dismiss="modal">Deletar</button>
+			    </div>
+		    </div>
+		</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+</html>

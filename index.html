@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>SmartDome</title>
+	<!-- !**********************************************************************! -->
+	<!-- !                              Font Awesome                            ! -->
+	<!-- ************************************************************************ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- ************************************************************************ -->
+	<!-- !                            Fonts Exportadas                          ! -->
+	<!-- ************************************************************************ -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+	<!-- !**********************************************************************! -->
+	<!-- !                            Bootstrap e Ajax                          ! -->
+	<!-- ************************************************************************ -->
+	<link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- ************************************************************************ -->
+	<!-- !                               ScrollMagic                            ! -->
+	<!-- ************************************************************************ -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>		
+	<!-- ************************************************************************ -->
+	<!-- !                                 Padrão                               ! -->
+	<!-- ************************************************************************ -->
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="html, web, smartDome">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/icone.png">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="application.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	
+</head>
+<body>
+	<header>
+		<button style="background: transparent; border: 0; z-index:100; width: 4em; height: 2.8em; padding: 0em;" data-toggle="modal" data-target="#relatorio">
+			<img style="z-index:-100" src="img/logo.png"/>
+		</button>
+		<h4 style="z-index:-100">Minha Casa</h4>
+		<br/>
+		<hr/>
+	</header>
+	<div class="comodo" onclick="location.href='comodo0.html'">
+		<h4>Banheiro</h4>
+	</div>
+	<div class="comodo" onclick="location.href='comodo1.html'">
+		<h4>Cozinha</h4>
+	</div>
+	<div class="comodo" onclick="location.href='comodo2.html'">
+		<h4>Sala</h4>
+	</div>
+	<div class="comodo" onclick="location.href='comodo4.html'">
+		<h4>Quarto</h4>
+	</div>
+	<div class="comodo" onclick="location.href='comodo3.html'">
+		<h4>Varanda</h4>
+	</div>
+	<div class="vazio">
+	</div>
+	<footer>
+		<button class="btnButao" data-toggle="modal" data-target="#funCities"></button>
+		<button class="btnNovoComodo" data-toggle="modal" data-target="#newComodo"><span class="glyphicon glyphicon-plus"></span></button>
+	</footer>
+	<div id="funCities" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    	<!-- Modal content-->
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        	<h4 class="modal-title">Funções City</h4>
+		      	</div>
+		   		<div class="modal-body">
+		        	<div class="funcoes">
+						<h4>Polícia</h4>
+					</div>
+					<div class="funcFunCities">
+						<label class="switch">
+						  <input type="checkbox" id="checaFuncao1">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+		        	<div class="funcoes">
+						<h4>Saúde</h4>
+					</div>
+					<div class="funcFunCities">
+						<label class="switch">
+						  <input type="checkbox" id="checaFuncao2">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+		        	<div class="funcoes">
+						<h4>Transporte</h4>
+					</div>
+					<div class="funcFunCities">
+						<label class="switch">
+						  <input type="checkbox" id="checaFuncao3">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+		        	<div class="funcoes">
+						<h4>Bombeiros</h4>
+					</div>
+					<div class="funcFunCities">
+						<label class="switch">
+						  <input type="checkbox" id="checaFuncao4">
+						  <span class="slider round"></span>
+						</label>
+					</div>
+		    	</div>
+			    <div class="modal-footer">
+			    </div>
+		    </div>
+		</div>
+	</div>
+	<div id="newComodo" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	    	<!-- Modal content-->
+		    <div class="modal-content">
+		    	<div class="modal-header">
+		        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        	<h4 class="modal-title">Especifique seu cômodo.</h4>
+		      	</div>
+		   		<div class="modal-body">
+					<input type="name" class="form-control" id="nomeComodo" placeholder="Nome">
+					<br/>
+		    		<select class="form-control" id="sel1" placeholder="Categoria">
+					    <option>Categoria</option>
+					    <option></option>
+					    <option>Quarto</option>
+					    <option>Sala</option>
+					    <option>Cozinha</option>
+					    <option>Varanda</option>
+					    <option>Banheiro</option>
+					    <option>Garagem</option>
+					    <option>Outro</option>
+					</select>
+		    	</div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+			    </div>
+		    </div>
+		</div>
+	</div>
+	<div id="relatorio" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Relatório Geral.</h4>
+					</div>
+					<div class="modal-body">
+						<h1></h1>
+						<p><b>Lâmpadas:</b>5</p>
+						<p><b>Lâmpadas Funcionando:</b>4</p>
+						<p><b>Lâmpadas Queimadas:</b>1</p>
+						<p>Locais: Varanda</p>
+					<p><b>Quantidade de Watts/Hora Gastos:</b>1146</p>
+					<p><b>Valor Watts/Hora:</b>R$0,23</p>
+					<p><b>Gasto Mensal Final Estimado:</b>R$129,34</p>
+					<hr/>
+					<p><b>Gastos Até o Momento:</b>R$49,34</p>
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
