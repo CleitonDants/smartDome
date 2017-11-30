@@ -1,0 +1,328 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #191818;
+	padding:1em;
+	padding-left:2em;
+	padding-right:2em;
+}
+
+header{
+	height: 3.5em;
+}
+
+header img{
+	float: left;
+	width: 4.8em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+}
+
+header button{
+	padding-top: 0.2em;
+	height: 2.8em;
+	width: 5em;
+	float:left;
+	z-index: 5;
+}
+
+header span{
+	z-index: -100;
+}
+
+header h4{
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	padding-left: 20%;
+=}
+
+header h4.quarto{
+	z-index: -100;
+	padding-left: 29%;
+}
+
+header h4.sala{
+	z-index: -100;
+	padding-left: 33%;
+}
+
+header h4.varanda{
+	z-index: -100;
+	padding-left: 27%;
+}
+
+header h4.banheiro{
+	z-index: -100;
+	padding-left: 24%;
+}
+
+header h4.cozinha{
+	z-index: -100;
+	padding-left: 25%;
+}
+
+.comodo{
+	margin-top: 2em;
+	margin-right:2em;
+	height: 8.4em;
+	width: 8.4em;
+	padding-top: 2.5em;
+	background-color: #9b3333;
+	display: block;
+	float: left;
+}
+
+.comodo:nth-child(2n+1){
+	margin-right:0em;
+}
+
+.comodo h4{
+	font-size: 1.5em;
+	color:white;
+	text-align: center;
+}
+
+.imgComodo{
+	margin-top: 0.5em;
+	font-size: 3em;
+	color:white;
+	text-align: center;
+}
+
+.iot{
+	margin-top: 2em;
+	height: 3em;
+	width: 13.55em;
+	background-color: #9b3333;
+	display: block;
+	float: left;
+	margin-right: 1em;
+}
+
+.iot h4{
+	font-size: 1.5em;
+	color:white;
+	padding-left:1em;
+}
+
+.iotON{
+	margin-top: 2.3em;
+	float: left;
+	border-radius:100%;
+	color:white;
+}
+
+.iotON h4{
+	text-align: center;
+}
+
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #00db03;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+
+.vazio{
+	margin-top: 2em;
+	margin-right:2em;
+	height: 5em;
+	width: 100%;
+	padding-top: 2.5em;
+	background-color: #9b3333;
+	display: block;
+	float: left;
+}
+
+footer{
+	background: #191818; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(transparent, #191818, #191818, #191818, #191818, #191818); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, #191818, #191818, #191818, #191818, #191818); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, #191818, #191818, #191818, #191818, #191818); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, #191818, #191818, #191818, #191818, #191818); /* Standard syntax */
+	bottom:0;
+	width: 100vw;
+	height: 7.5em;
+	position: fixed;
+	padding-bottom:3em;
+}
+
+footer button{
+	margin-top:2.5em;
+	background: url(img/btnCidadeJpg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	float:left;
+	padding-top: 2.5em;
+	width:4em;
+	height:4em;
+	margin-right:10.8em;
+}
+
+
+footer span{
+	padding-top: 1.35em;
+	font-size:2.2em;
+	float:left;
+	display: inline-block;
+	padding-left: 0.8em;
+	color:white;
+}
+
+footer .btnButao{
+	background: url(img/btnCidadeJpg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	float:left;
+	width:5em;
+	height:5em;
+	margin:0;
+	padding:0;
+	margin-top:1.5em;
+	margin-right:11.6em;
+	border-radius: 100%;
+	border-width: 0em;
+}
+
+
+footer button.btnNovoComodo{
+	float:left;
+	background: none;
+	font-size:1em;
+	height: 5em;
+	width: auto;
+	color:white;
+	border-width: 0em;
+	margin: 0em;
+	margin-top:1.5em;
+	padding: 0em;
+	text-align: center;
+}
+
+footer .btnNovoComodo span{
+	padding:0em;
+	z-index: -100;
+}
+
+footer button.btnNovoDevice{
+	background: none;
+	font-size:1em;
+	height: 3em;
+	width: auto;
+	color:white;
+	border-width: 0em;
+	margin: 0em;
+	margin-top:1.5em;
+	padding: 0em;
+	text-align: center;
+	padding-left: 16.8em;
+}
+
+footer .btnNovoDevice span{
+	padding:0em;
+	z-index: -100;
+}
+
+footer .btnNovoDevice:last-child{
+	padding-left: 16.6em;
+}
+
+.footer{
+	height: 12em;
+}
+
+
+#funCities{
+	padding-top: 10%;
+}
+
+.funcoes{
+	margin-top: 1em;
+	height: 3em;
+	width: 13.55em;
+	background-color: #9b3333;
+	display: block;
+	float: left;
+	margin-right: 1em;
+}
+
+.funcoes h4{
+	font-size: 1.2em;
+	color:white;
+	padding-left:1em;
+}
+
+.funcFunCities{
+	margin-top: 1.3em;
+	float: left;
+	border-radius:100%;
+	color:white;
+}
+
+.funcFunCities h4{
+	text-align: center;
+}
+
+#newComodo{
+	padding-top: 15%;
+}
+
+#newDevice{
+	padding-top: 15%;
+}
+
+#deleteDevice{
+	padding-top: 15%;
+}

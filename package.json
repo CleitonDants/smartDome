@@ -1,0 +1,31 @@
+{
+  "name": "hackard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ard.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "johnny-five": "^0.11.7",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleitonDants/smartDome.git"
+  },
+  "keywords": [
+    "hardware",
+    "iot",
+    "arduino"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CleitonDants/smartDome/issues"
+  },
+  "homepage": "https://github.com/CleitonDants/smartDome#readme"
+}
